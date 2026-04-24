@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DRIFT — 3D Racing</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<div class="hud" id="hud">
+  <div class="hud-tl">
+    <div class="lap-label">LAP</div>
+    <div class="lap-val"><span id="lap">1</span><span class="lap-total"> / 3</span></div>
+    <div class="lap-time" id="lap-time">0:00.000</div>
+    <div class="best-time" id="best-time">BEST —</div>
+  </div>
+  <div class="hud-br">
+    <div class="speed-val" id="speed">0</div>
+    <div class="speed-unit">KM/H</div>
+    <div class="rpm-wrap" id="rpm-wrap">
+      <div class="rpm-seg"></div><div class="rpm-seg"></div>
+      <div class="rpm-seg"></div><div class="rpm-seg"></div>
+      <div class="rpm-seg"></div><div class="rpm-seg"></div>
+      <div class="rpm-seg"></div><div class="rpm-seg"></div>
+      <div class="rpm-seg"></div><div class="rpm-seg"></div>
+    </div>
+    <div class="gear-row">
+      <span class="gear-label">GEAR</span>
+      <span class="gear-val" id="gear">N</span>
+    </div>
+  </div>
+  <div class="hud-bl">
+    <div class="hint">W/S — Gas/Brake &nbsp;|&nbsp; A/D — Steer &nbsp;|&nbsp; SPACE — Handbrake</div>
+  </div>
+</div>
+
+<div class="countdown" id="countdown"></div>
+<div class="hit-flash" id="hit-flash"></div>
+
+<div class="overlay" id="overlay">
+  <div class="overlay-inner">
+    <div class="logo">DRIFT<span>.</span></div>
+    <div class="logo-sub">3D RACING</div>
+    <div class="overlay-info" id="overlay-info"></div>
+    <button class="start-btn" id="start-btn">START ENGINE</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
